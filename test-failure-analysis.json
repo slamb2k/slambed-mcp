@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "totalFailed": 0,
+    "mockingIssues": 0,
+    "apiMismatches": 0,
+    "assertionFailures": 0,
+    "importIssues": 0,
+    "typeErrors": 0,
+    "other": 0
+  },
+  "categories": {
+    "Mock Function Issues": [],
+    "API Contract Mismatches": [],
+    "Assertion Failures": [],
+    "Import/Module Issues": [],
+    "Type Errors": [],
+    "Other": []
+  },
+  "patterns": [],
+  "details": []
+}

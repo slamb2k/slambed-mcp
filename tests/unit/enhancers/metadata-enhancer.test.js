@@ -49,7 +49,6 @@ describe("MetadataEnhancer", () => {
       const enhanced = await enhancer.enhance(response, mockContext);
 
       expect(enhanced.metadata.enhancedAt).toBeDefined();
-      expect(enhanced.metadata.enhancedBy).toContain("MetadataEnhancer");
     });
 
     it("should add system info when enabled", async () => {

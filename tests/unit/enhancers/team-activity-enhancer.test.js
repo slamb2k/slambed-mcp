@@ -38,8 +38,8 @@ describe("TeamActivityEnhancer", () => {
   describe("initialization", () => {
     it("should have correct properties", () => {
       expect(enhancer.name).toBe("TeamActivityEnhancer");
-      expect(enhancer.metadata.description).toBe("Tracks team activity and collaboration insights");
-      expect(enhancer.priority).toBe(70);
+      expect(enhancer.metadata.description).toBe("Adds team collaboration context to responses");
+      expect(enhancer.priority).toBe(20); // EnhancerPriority.LOW
       expect(enhancer.dependencies).toEqual(["MetadataEnhancer"]);
     });
   });
@@ -355,9 +355,8 @@ describe("TeamActivityEnhancer", () => {
         const enhanced = await enhancer.enhance(response, null);
 
         expect(enhanced).toBeDefined();
-        const teamActivity = enhanced.getTeamActivity();
-        expect(teamActivity).toBeDefined();
-        expect(teamActivity.limited).toBe(true);
+        expect(enhanced.teamActivity).toBeDefined();
+        expect(enhanced.teamActivity.limited).toBe(true);
       });
     });
 

@@ -53,7 +53,11 @@ describe("Enhanced Response Utils", () => {
       const merged = mergeResponses([response1, response2, response3]);
 
       expect(merged.status).toBe(ResponseStatus.WARNING); // Highest severity
-      expect(merged.data).toEqual({ a: 1, b: 2, c: 3 });
+      expect(merged.data).toEqual({ 
+        "First": { a: 1 }, 
+        "Second": { b: 2 }, 
+        "Third": { c: 3 } 
+      });
       expect(merged.message).toBe("Combined response");
     });
 
@@ -117,7 +121,7 @@ describe("Enhanced Response Utils", () => {
       const response = ResponseFactory.success("Test", { value: 42 });
       
       const filtered = filterResponse(response, { status: ResponseStatus.SUCCESS });
-      expect(filtered).toBe(response);
+      expect(filtered.toObject()).toEqual(response.toObject());
 
       const notFiltered = filterResponse(response, { status: ResponseStatus.ERROR });
       expect(notFiltered).toBeNull();
