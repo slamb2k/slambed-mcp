@@ -91,6 +91,143 @@ Glam provides:
 - Reviewer suggestions based on touched files
 - Conflict warnings
 
+**Checking team activity before starting work:**
+```
+"Who's working on the API endpoints right now?"
+```
+Glam-mcp helps by:
+- Scanning recent commits and active branches
+- Identifying team members working on related files
+- Suggesting coordination strategies
+- Warning about potential conflicts
+
+**Smart commit workflow:**
+```
+"Commit these changes with a good message"
+```
+The assistant will:
+- Analyze the changes to determine commit type
+- Generate conventional commit messages
+- Group related changes appropriately
+- Suggest splitting large commits if needed
+
+**Release preparation:**
+```
+"Is this branch ready to merge to main?"
+```
+Glam-mcp performs:
+- Conflict detection with main branch
+- CI/CD status verification
+- Test coverage analysis
+- Risk assessment for the merge
+
+**Debugging a failed PR:**
+```
+"Why are the PR checks failing?"
+```
+The assistant leverages glam-mcp to:
+- Fetch detailed CI/CD logs
+- Identify the root cause
+- Suggest fixes based on error patterns
+- Check if similar issues affected other PRs
+
+**Code review assistance:**
+```
+"Help me review this PR"
+```
+Glam provides:
+- Automated checklist generation
+- High-risk change identification
+- Test coverage verification
+- Suggestions for additional reviewers
+
+**Syncing with upstream changes:**
+```
+"Update my branch with the latest from main"
+```
+The assistant will:
+- Check for conflicts before syncing
+- Preserve local changes safely
+- Resolve simple conflicts automatically
+- Guide through complex conflict resolution
+
+**Finding related work:**
+```
+"Is anyone else working on the user service?"
+```
+Glam-mcp searches for:
+- Active branches touching similar files
+- Recent PRs in the same area
+- Team members with expertise in that code
+- Relevant documentation or issues
+
+**Setting up development environment:**
+```
+"Set up my workspace for this project"
+```
+The assistant uses glam-mcp to:
+- Clone the repository with proper configuration
+- Set up git hooks and aliases
+- Configure team preferences
+- Initialize session context
+
+### Advanced Workflows
+
+**Multi-branch development:**
+```
+"I need to work on both the frontend and backend changes simultaneously"
+```
+Glam-mcp orchestrates:
+- Creates separate branches for frontend and backend
+- Tracks dependencies between changes
+- Suggests integration points
+- Manages cross-branch conflicts
+- Coordinates PR sequencing
+
+**Hotfix deployment:**
+```
+"We need to deploy a critical fix to production immediately"
+```
+The assistant coordinates:
+- Creates hotfix branch from production tag
+- Bypasses normal review process safely
+- Ensures fix is cherry-picked to main
+- Updates all active feature branches
+- Documents the emergency change
+
+**Large refactoring project:**
+```
+"Help me refactor the entire authentication module"
+```
+Glam-mcp provides:
+- Breaking down refactoring into safe stages
+- Creating incremental commits
+- Maintaining backwards compatibility
+- Coordinating with affected teams
+- Tracking progress through checklists
+
+**Dependency update workflow:**
+```
+"Update all our dependencies safely"
+```
+The assistant will:
+- Check for breaking changes in updates
+- Create isolated test branches
+- Run comprehensive test suites
+- Generate detailed update reports
+- Suggest phased rollout strategies
+
+**Cross-team collaboration:**
+```
+"Coordinate with the mobile team on the new API"
+```
+Glam-mcp facilitates:
+- Creating shared branches
+- Setting up integration tests
+- Tracking API contract changes
+- Coordinating release timing
+- Managing documentation updates
+
 ## Tool Categories
 
 ### GitHub Flow Tools
